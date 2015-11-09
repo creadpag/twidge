@@ -1,0 +1,139 @@
+twidge (1.1.1) unstable; urgency=medium
+
+  * Relax aeson upper bound.  Closes: #746110.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sat, 21 Jun 2014 10:54:29 -0500
+
+twidge (1.1.0) unstable; urgency=low
+
+  * Update to new twitter API.  Thanks to Adam Fitzpatrick for the patch.
+    Closes: #712223, #632259.
+  * Updated to newer hoauth.  Now buildable in sid again.
+
+ -- John Goerzen <jgoerzen@complete.org>  Fri, 14 Jun 2013 00:30:27 -0500
+
+twidge (1.0.9) unstable; urgency=low
+
+  * Correctly handle UTF-8 updates given on the command line.
+    Closes: #611775.
+  * Correct VCS and homepage URLs.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sat, 05 Feb 2011 13:26:51 -0600
+
+twidge (1.0.8.1+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Fix build deps to refer to ghc instead of ghc6 (Closes: #629725)
+  * Work on newer HaXml in Debian 
+
+ -- Iain Lane <laney@debian.org>  Thu, 28 Jul 2011 13:15:31 +0100
+>>>>>>> debnmu
+
+twidge (1.0.8.1) unstable; urgency=low
+
+  * Clean up a debian packaging bug introduced in 3rd-party commit
+    880982d2bc2a9dbbff2893fa16ceb04ce32f6356.  Package now contains
+    all the files it should again.  Closes: #609139.
+
+ -- John Goerzen <jgoerzen@complete.org>  Thu, 06 Jan 2011 22:17:54 -0600
+
+twidge (1.0.8) unstable; urgency=low
+
+  * Accept parens as part of URLs.  CLoses: #608978.
+
+ -- John Goerzen <jgoerzen@complete.org>  Wed, 05 Jan 2011 00:12:38 -0600
+
+twidge (1.0.6) unstable; urgency=low
+
+  * Twitter invalidated the twidge API key because it became publicly
+    known (sigh).  Have now obfuscated it enough for them.
+    twidge will be broken by default without this fix.
+    Closes: #601427.
+
+ -- John Goerzen <jgoerzen@complete.org>  Mon, 25 Oct 2010 20:28:16 -0500
+
+twidge (1.0.5) unstable; urgency=high
+
+  * Twitter has dropped support for http://twitter.com URLs on some
+    servers, and now generally requires http://api.twitter.com/1.  This
+    required some minor changes to configuration code.  Twitter uses geoIP
+    and some of there servers work fine with 1.0.2 while others don't.
+    This version will work with all of them.
+
+ -- John Goerzen <jgoerzen@complete.org>  Wed, 01 Sep 2010 00:09:38 -0500
+
+twidge (1.0.2) unstable; urgency=high
+
+  * Corrected bug in 1.0.1 that prevented any updates from posting properly.
+  * Fixed the withBitly flag support.
+
+ -- John Goerzen <jgoerzen@complete.org>  Thu, 03 Jun 2010 00:08:34 -0500
+
+twidge (1.0.1) unstable; urgency=medium
+
+  * New upstream release.
+  * Twitter is dropping support for HTTP basic auth.  Versions of twidge
+    prior to 1.0.0 will soon fail to work.  This version switches
+    using oAuth to maintain compatibility.  Users will need to re-run
+    twidge setup to complete the switch.
+    + Code relevant to #521616 has been removed.  Closes: #521616.
+    + New HTTP client in place.  Closes: #535766.
+  * New commands to support new-style retweets: lsrt, lsrtreplis, lsrtarchive.
+    Closes: #583999.
+  * lsarchive gained -U to let you specify which user's posts to see.
+  * New support for URL shorteners: is.gd, bit.ly, j.mp.
+    Patch from Robin Green.
+  * Added --width option to ls commands.
+    Patch from Robin Green.
+  * Corrected a spelling mistake.  Closes: #521616.
+  * Added support for blocking and unblocking.
+  * Only shorten URLs when needed.  Patch from Eric Y. Kow.
+    Closes: #567174.
+  * Added support to set an in_reply_to_status_id via the -i argument
+    to update.
+  * Provide correct UTF-8 output.
+  * New config file options: savelast, alias section, oauth-related URLs,
+  * Added bash completion script from Ernesto Hernández-Novich.
+  * ACK NMU.  Closes: #550657.
+
+ -- John Goerzen <jgoerzen@complete.org>  Wed, 02 Jun 2010 03:34:01 -0500
+
+twidge (0.99.4+nmu1) unstable; urgency=low
+
+  * Non-maintainer upload needed to address xpdf's RC bugs:
+  * Perform the PDF generation with pdftotext from poppler-utils
+    instead of xpdf-utils (Closes: #550657)
+
+ -- Moritz Muehlenhoff <jmm@debian.org>  Mon, 02 Nov 2009 22:28:23 +0100
+
+twidge (0.99.4) unstable; urgency=low
+
+  * Added build-dep on libghc6-hsh-dev.  Closes: #506543.
+  * Tightened build-deps.
+
+ -- John Goerzen <jgoerzen@complete.org>  Thu, 11 Dec 2008 03:33:17 -0600
+
+twidge (0.99.3) unstable; urgency=low
+
+  * Added official "source" paramter from Twitter.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sun, 14 Sep 2008 22:10:07 -0500
+
+twidge (0.99.2) unstable; urgency=low
+
+  * Now properly outputs UTF-8 strings for Unicode characters.
+  * Removed incompatibility with newer Cabal versions.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sat, 13 Sep 2008 09:21:12 -0500
+
+twidge (0.99.1) unstable; urgency=low
+
+  * Fixed a logic bug that made -su options not work after the first time.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sat, 13 Sep 2008 08:45:24 -0500
+
+twidge (0.99.0) unstable; urgency=low
+
+  * Initial release.
+
+ -- John Goerzen <jgoerzen@complete.org>  Wed, 02 Jul 2008 10:28:15 -0500

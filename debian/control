@@ -1,0 +1,35 @@
+Source: twidge
+Section: utils
+Priority: optional
+Maintainer: John Goerzen <jgoerzen@complete.org>
+Build-Depends: debhelper (>= 7), groff, docbook-utils, jade, lynx, scons, poppler-utils, sgml2x, gtk-doc-tools, ghc (>= 6.8.2), haskell-devscripts (>= 0.6.6), libghc-missingh-dev (>= 1.0.0), libghc-network-dev, libghc-unix-dev, libghc-mtl-dev, libghc-aeson-dev (>= 0.6.1.0), libghc-filepath-dev, libghc-configfile-dev (>= 1.0.4.5), libghc-hslogger-dev (>= 1.0.7.1), libghc-regex-posix-dev, libghc-utf8-string-dev, libghc-hsh-dev (>= 1.2.6.3), libghc-hoauth-dev
+Standards-Version: 3.9.1
+Homepage: https://github.com/jgoerzen/twidge/wiki/
+Vcs-Browser: https://github.com/jgoerzen/twidge
+Vcs-Git: git://github.com/jgoerzen/twidge.git
+
+Package: twidge
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${haskell:Depends}, curl
+Description: Unix Command-Line Twitter and Identica Client
+ twidge is a client for microblogging sites such as Twitter and
+ Identica (identi.ca). Microblogging sites let you post short
+ one-paragraph updates, follow the updates that your friends post, and
+ interact with everyone in the site in a conversation style.
+ .
+ twidge is a client to make working with microblogging sites faster
+ and easier. It is extremely versatile, and can be customized to work
+ the way you want to work, and combined with other tools to do just
+ about anything.
+ .
+ twidge can be used quite nicely interactively from the shell. It is
+ useful directly as-is, and with simple shell aliases can make a
+ highly efficient system to do exactly what you want. It is perfectly
+ capable of being your only client for microblogging.
+ .
+ twidge also can be used in an automated way, via cron(1), or it can
+ even integrate with your email system.
+ .
+ A full list of twidge features, along with numerous suggestions on
+ how to use it, can be found at the twidge website at
+ http://software.complete.org/twidge.
